@@ -1,0 +1,83 @@
+% !TeX encoding = UTF-8
+\documentclass[a4paper,
+               fontsize=14pt, 
+               DIV=calc,
+               twoside=false,
+               headings=small,
+               numbers=endperiod,
+               bibliography=totoc,
+               %draft,
+              ]{scrbook}
+                 
+              
+\usepackage{xltxtra}
+
+\defaultfontfeatures{Ligatures=TeX,Mapping=tex-text}
+
+\usepackage{unicode-math}
+\setmainfont{Times New Roman}
+\setromanfont{Times New Roman} 
+\setsansfont{Arial} 
+\setmonofont{Courier New} 
+\setmathfont[Scale=MatchLowercase]{Asana Math}
+
+\newfontfamily{\cyrillicfont}{Times New Roman} 
+\newfontfamily{\cyrillicfontrm}{Times New Roman}
+\newfontfamily{\cyrillicfonttt}{Courier New}
+\newfontfamily{\cyrillicfontsf}{Arial}
+              
+
+\include{preambula}
+\usepackage{hhline}
+\usepackage{rotating}
+\usepackage{minted}
+\setminted{fontsize=\small}
+
+\usepackage[os=win]{menukeys}      % клавиатерные клавиши
+\changemenucolortheme{menus}{blacknwhite}
+
+\hypersetup{pdftitle={Название диплома},
+	pdfauthor={И.И. Иванов}
+}
+
+
+\begin{document}
+		
+\renewcommand\bibname{Библиографический список}	
+%\addto\captionsrussian{\def\refname{Список используемой литературы}}
+\makeatletter
+\renewcommand\@biblabel[1]{#1.}
+\makeatother
+
+\let\oldthebibliography\thebibliography
+\let\endoldthebibliography\endthebibliography
+\renewenvironment{thebibliography}[1]{
+  \begin{oldthebibliography}{#1}
+    \setlength{\itemsep}{3pt}
+    \setlength{\parskip}{0em}
+}
+{
+  \end{oldthebibliography}
+}
+
+                        
+\graphicspath{{./figures/}{./figures_vect/}}
+%-------------------------------------------------------------------------------
+% Include title pages
+\includepdf[pages=1-2]{_titul/oblozhka.pdf}
+
+\tableofcontents
+
+% Введение
+%\addchap{Введение}
+\include{00_intro/intro}
+\include{01_chapter1/text}
+
+\appendix
+\include{appendix/A}
+
+%\addcontentsline{toc}{chapter}{Литература}
+\bibliographystyle{gost2008}
+\bibliography{./biblio/library} %, ./biblio/rubase}
+
+\end{document}

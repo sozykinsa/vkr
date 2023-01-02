@@ -1,0 +1,13 @@
+# Default ignored files
+/_minted-diplom
+diplom.aux
+diplom.bbl
+diplom.out
+diplom.log
+diplom.blg
+diplom.synctex.gz
+diplom.pdf
+diplom
+/00_intro/intro.aux
+/01_chapter1/text.aux
+/appendix/A.aux

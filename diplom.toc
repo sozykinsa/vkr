@@ -1,0 +1,12 @@
+\babel@toc {russian}{}\relax 
+\begingroup \setkomafont {chapterentrypagenumber}{\normalfont }\KOMAoptions {chapterentrydots}
+\contentsline {chapter}{\nonumberline Введение}{4}{chapter*.2}%
+\endgroup 
+\contentsline {chapter}{\numberline {1}Название главы}{5}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Название параграфа}{5}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}Название пункта в параграфе}{5}{subsection.1.1.1}%
+\contentsline {chapter}{\numberline {A}Приложение}{7}{appendix.A}%
+\begingroup \setkomafont {chapterentrypagenumber}{\normalfont }\KOMAoptions {chapterentrydots}
+\contentsline {chapter}{\nonumberline Библиографический список}{8}{chapter*.4}%
+\endgroup 
+\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
